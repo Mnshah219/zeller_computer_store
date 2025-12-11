@@ -7,8 +7,8 @@ export class Checkout {
   private productCatalog: ProductCatalog;
   private pricingRules: PricingRule[];
 
-  constructor(products: Product[] ,pricingRules: PricingRule[] = []) {
-    this.productCatalog = new ProductCatalog(products);
+  constructor(pricingRules: PricingRule[] = []) {
+    this.productCatalog = new ProductCatalog();
     this.pricingRules = pricingRules;
   }
 

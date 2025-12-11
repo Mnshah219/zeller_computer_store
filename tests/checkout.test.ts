@@ -5,15 +5,8 @@ import { SKU, Product } from '../src/types/product';
 import { PricingRule } from '../src/rules/pricing-rule';
 import { getItemCount, getUnitPrice } from '../src/rules/pricing-helpers';
 
-const products: Product[] = [
-  { sku: SKU.IPD, name: 'Super iPad', price: 549.99 },
-  { sku: SKU.MBP, name: 'MacBook Pro', price: 1399.99 },
-  { sku: SKU.ATV, name: 'Apple TV', price: 109.50 },
-  { sku: SKU.VGA, name: 'VGA adapter', price: 30.00 },
-];
-
 const createCheckout = (pricingRules: PricingRule[] = []) =>
-  new Checkout(products, pricingRules);
+  new Checkout(pricingRules);
 
 describe('Checkout System', () => {
   describe('Basic functionality', () => {
